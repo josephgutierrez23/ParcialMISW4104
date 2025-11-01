@@ -2,26 +2,26 @@ import {Routes} from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'auth/login',
+    path: 'login',
     loadComponent: () =>
       import('./features/login/pages/login-page.component').then(
         (m) => m.LoginPageComponent
       ),
   },
   {
-    path: 'dashboard/vehicles',
+    path: 'vehicles',
     loadComponent: () =>
       import(
-        './features/vehicles/layout/vehicles-page-layout.component'
-        ).then((m) => m.VehiclesPageLayoutComponent),
+        './features/vehicles/pages/vehicles-page.component'
+        ).then((m) => m.VehiclesPageComponent),
   },
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'auth/login',
+    redirectTo: 'login',
   },
   {
     path: '**',
-    redirectTo: 'auth/login',
+    redirectTo: 'login',
   }
 ];
