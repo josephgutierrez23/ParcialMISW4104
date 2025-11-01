@@ -1,59 +1,76 @@
-# ParcialMISW4104
+# 🌐 ParcialMISW4104
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+**👤 Autor:** Joseph Mauricio Gutierrez Valero  
+**🎓 Maestría:** MISO  
+**📚 Materia:** Conceptos básicos de ingeniería de software para la web  
+**📅 Fecha:** 31 de octubre de 2024
 
-## Development server
+---
 
-To start a local development server, run:
+## 📝 Descripción
+
+Este proyecto corresponde al parcial de la materia _Conceptos básicos de ingeniería de software para la web_.  
+Está desarrollado en **Angular** y utiliza **TypeScript** y **JavaScript**.
+
+---
+
+## 📦 Instalación de dependencias
+
+Instala las dependencias con **yarn**:
+
+```bash
+yarn install
+
+yarn start
+```
+
+O con **npm**:
+
+```bash
+npm start
+```
+
+## 🚀 Ejecución del proyecto
+
+Para ejecutar el proyecto, utiliza el siguiente comando:
 
 ```bash
 ng serve
-```
+``` 
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Luego, abre tu navegador y navega a `http://localhost:4200/`.
+El proyecto se recargará automáticamente si realizas cambios en el código fuente.
+---
 
-## Code scaffolding
+## 🛠️ Tecnologías utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+La interfaz de usuario utiliza **NG Bootstrap**, una librería que integra los componentes de Bootstrap con Angular. Permite crear interfaces modernas, responsivas y fáciles de usar con componentes preconstruidos como botones, formularios, modales y más.
 
-```bash
-ng generate component component-name
-```
+**Versiones utilizadas en el proyecto:**
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Angular CLI: `20.0.4`
+- Node: `22.17.0`
+- Package Manager (npm): `11.4.2`
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 🧩 Diseño Molecular
 
-To build the project run:
+El proyecto emplea diseño molecular, una metodología que divide el sistema en módulos pequeños y autónomos llamados “moléculas”.
+Cada molécula encapsula una funcionalidad específica y se comunica con otras mediante interfaces bien definidas.
+Esto facilita la reutilización, el mantenimiento y la escalabilidad, permitiendo que cada módulo evolucione de forma independiente
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📄 Licencia
 
-## Running unit tests
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📞 Contacto
 
-```bash
-ng test
-```
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de mi correo electrónico:
 
-## Running end-to-end tests
+- **Correo electrónico:**
+- jm.gutierrez23@uniandes.edu.co
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
