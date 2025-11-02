@@ -74,3 +74,6 @@ Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de mi 
 - **Correo electrónico:**
 - jm.gutierrez23@uniandes.edu.co
 
+## 📅 Fecha de finalización
+
+Este proyecto fue finalizado el 1 de noviembre de 2025.
