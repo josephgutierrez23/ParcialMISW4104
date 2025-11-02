@@ -1,4 +1,4 @@
-import {Component, inject, OnInit, signal} from '@angular/core';
+import {Component, computed, inject, OnInit, signal} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 import {VehiclesService} from '../../../core/services/vehicles.service';
@@ -8,6 +8,7 @@ import {HeaderBannerComponent} from '../../../shared/atoms/header-banner/header-
 import {FooterComponent} from '../../../shared/atoms/footer/footer.component';
 import {VehiclesTableComponent} from '../../../shared/organisms/vehicles-table/vehicles-table.component';
 import {VehicleDetailComponent} from '../../../shared/organisms/vehicle-detail/vehicle-detail.component';
+import {VehiclesSummaryComponent} from '../../../shared/organisms/vehicles-summary/vehicles-summary.component';
 
 @Component({
   selector: 'app-vehicles-page',
@@ -18,6 +19,7 @@ import {VehicleDetailComponent} from '../../../shared/organisms/vehicle-detail/v
     FooterComponent,
     VehiclesTableComponent,
     VehicleDetailComponent,
+    VehiclesSummaryComponent,
   ],
   template: `
     <div class="vehicles-page container-fluid py-3">
@@ -30,6 +32,11 @@ import {VehicleDetailComponent} from '../../../shared/organisms/vehicle-detail/v
             [vehicles]="vehicles()"
             (vehicleSelected)="onVehicleSelected($event)"
           ></app-vehicles-table>
+
+          <app-vehicles-summary
+            class="mt-3"
+            [brandCounts]="brandCounts()"
+          ></app-vehicles-summary>
         </div>
 
         <div class="col-lg-4">
@@ -83,4 +90,12 @@ export class VehiclesPageComponent implements OnInit {
       ...v,
     };
   }
+
+  brandCounts = computed(() => {
+    const counts: Record<string, number> = {};
+    for (const v of this.vehicles()) {
+      counts[v.marca] = (counts[v.marca] ?? 0) + 1;
+    }
+    return counts;
+  });
 }
